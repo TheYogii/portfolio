@@ -1,0 +1,269 @@
+/* =========================================
+   TOOLS PAGE
+========================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.tools-hero {
+    padding-bottom: 45px;
+}
+
+.tools-hero h1 {
+    margin-bottom: 12px;
+}
+
+.tools-hero p {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* =========================================
+   TOOL NAVIGATION
+========================================= */
+
+.tool-navigation {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 14px 0;
+    background: rgba(255,255,255,0.96);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+}
+
+.tool-nav-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 9px;
+}
+
+.tool-nav-inner a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 14px;
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    background: #fff;
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.tool-nav-inner a i {
+    color: var(--primary);
+    font-size: 12px;
+}
+
+.tool-nav-inner a:hover {
+    color: var(--primary);
+    border-color: rgba(108,79,211,0.35);
+    background: #f8f6ff;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   TOOLS CONTENT
+========================================= */
+
+.tools-page {
+    padding: 55px 0 80px;
+}
+
+.tool-section {
+    position: relative;
+    display: flex;
+    gap: 30px;
+    max-width: 950px;
+    margin: 0 auto 25px;
+    padding: 40px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: #fff;
+    overflow: hidden;
+    scroll-margin-top: 100px;
+    transition: 0.3s ease;
+}
+
+.tool-section::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    right: -80px;
+    bottom: -80px;
+    border-radius: 50%;
+    background: #f6f3ff;
+    z-index: 0;
+}
+
+.tool-section:hover {
+    border-color: rgba(108,79,211,0.25);
+    box-shadow: var(--shadow);
+}
+
+.tool-section-icon {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: #f1edff;
+    color: var(--primary);
+    font-size: 24px;
+}
+
+.tool-section-content {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+}
+
+.tool-number {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--secondary);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.tool-section h2 {
+    margin: 0 0 12px;
+    color: var(--heading);
+    font-size: 25px;
+}
+
+.tool-section p {
+    max-width: 760px;
+    margin: 0 0 12px;
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.tool-visit {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.tool-visit:hover {
+    color: var(--secondary);
+}
+
+.tool-visit i {
+    font-size: 12px;
+}
+
+.back-to-tools {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 20px;
+    color: var(--text-light);
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.back-to-tools:hover {
+    color: var(--primary);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .tools-hero {
+        padding-bottom: 30px;
+    }
+
+    .tool-navigation {
+        position: relative;
+    }
+
+    .tool-nav-inner {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding: 3px 2px 7px;
+        scrollbar-width: thin;
+    }
+
+    .tool-nav-inner a {
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
+    .tools-page {
+        padding: 35px 0 55px;
+    }
+
+    .tool-section {
+        gap: 20px;
+        padding: 28px;
+        margin-bottom: 18px;
+    }
+
+    .tool-section-icon {
+        width: 55px;
+        height: 55px;
+        border-radius: 14px;
+        font-size: 20px;
+    }
+
+    .tool-section h2 {
+        font-size: 21px;
+    }
+
+    .tool-section p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .back-to-tools {
+        display: flex;
+        margin: 15px 0 0;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .tool-section {
+        display: block;
+        padding: 25px;
+    }
+
+    .tool-section-icon {
+        margin-bottom: 20px;
+    }
+
+    .tool-section h2 {
+        font-size: 20px;
+    }
+
+    .tool-section p {
+        font-size: 14px;
+    }
+
+    .tool-visit {
+        font-size: 13px;
+    }
+}
